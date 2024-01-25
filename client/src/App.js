@@ -8,7 +8,7 @@ function App() {
   const fetchDataFromApi = async () => {
     try {
       // 여기서 API 호출을 수행
-      const response = await axios.get('/proxy/ImageButton/findAll', { withCredentials: true });
+      const response = await axios.get('http://localhost:8000/', { withCredentials: true });
       console.log(response.data);
 
       // API 데이터를 처리하거나 상태를 업데이트할 수 있습니다.
