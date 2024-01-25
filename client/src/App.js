@@ -5,10 +5,14 @@ import axios from 'axios';
 
 function App() {
   // 앱이 시작할 때 API를 실행하는 함수
+  const instance = axios.create({
+    baseURL: "https://main--golden-dolphin-62c5ce.netlify.app",
+  });
+
   const fetchDataFromApi = async () => {
     try {
       // 여기서 API 호출을 수행
-      const response = await axios.get('/api', { withCredentials: true });
+      const response = await instance.get('/api', { withCredentials: true });
       console.log(response.data);
 
       // API 데이터를 처리하거나 상태를 업데이트할 수 있습니다.
