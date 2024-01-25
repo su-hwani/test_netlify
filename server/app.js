@@ -7,7 +7,13 @@ app.use(cors({
   credentials: true,
 }));
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  console.log("server success!!")
+  res.json('Hello World!')
+})
+
+app.get('/api', (req, res) => {
+  console.log("server success!!")
+  res.json('Hello api!')
 })
 
 app.listen(port, () => {
